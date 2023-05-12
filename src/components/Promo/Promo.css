@@ -37,7 +37,7 @@
     
 }
 
-@media screen and (min-width: 1279px) {
+@media screen and (min-width: 1024px) {
     .promo {
         min-height: 493px;
         margin: 20px auto 0 auto;
