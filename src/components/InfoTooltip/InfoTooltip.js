@@ -5,7 +5,7 @@ function InfoTooltip(props) {
 
     return (
       <div className={props.isOpen ? `popup popup_opened` : `popup`} onClick={props.onOutClick}>
-        <div className="popup__container">
+        <div className="popup__container edit-form popup-info">
             {props.children}
             <button className="popup__close-btn" type="button" aria-label="Закрыть попап" onClick={props.onClose}><img className="popup__close-icon" src={CloseBtn} alt='Иконка закрытия попапа'/></button>
         </div>

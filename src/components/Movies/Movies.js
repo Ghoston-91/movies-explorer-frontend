@@ -15,9 +15,9 @@ function Movies(props) {
     const isEmptyList = false;
 
     return (
-        <section className='movies'>
+        <div className='movies'>
             <AccountHeader routeLinks={props.routeLinks}/>
-            <main className='movies__main'>
+            <main>
                 <SearchForm />
                     {!isLoading ?
                         <>
@@ -33,7 +33,7 @@ function Movies(props) {
                     : <Preloader />}
             </main>  
             <Footer />
-        </section>
+        </div>
     );
 }
 

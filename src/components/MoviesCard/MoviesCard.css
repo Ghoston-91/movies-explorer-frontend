@@ -1,6 +1,7 @@
 .movie-card {
     width: auto;
     margin: 0 0 16px 0;
+    list-style-type: none;
 }
 
 .movie-card__container {
@@ -64,7 +65,7 @@
     object-fit: cover;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 769px) {
     .movie-card {
         margin: 0;
     }

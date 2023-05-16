@@ -17,14 +17,14 @@ function MoviesCard(props) {
     }
 
     return (
-        <div className='movie-card'>
+        <li className='movie-card'>
             <div className='movie-card__container'>
                 <h2 className='movie-card__title'>{props.title}</h2>
                 <p className='movie-card__length'>{props.length}</p>
                 <button className='movie-card__save-btn' type='button'><img className='movie-card__save-icon' src={Icon(props)} alt='Кнопка сохранения фильма'/></button>
             </div>
             <img className='movie-card__img' src={props.img} alt='Кнопка сохранения фильма'/>
-        </div>
+        </li>
     );
 }
 

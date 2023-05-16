@@ -83,7 +83,7 @@
     margin: 10px 0 0 0; 
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 769px) {
     .project {
         padding: 0 50px;
     }

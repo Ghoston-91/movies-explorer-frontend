@@ -20,7 +20,7 @@ function SearchForm() {
                     <p className="searcher__switch-text">Короткометражки</p>
                 </div>
             </form>
-            <hr className="searcher__line"/>
+            <hr className="line"/>
         </>
 
     );

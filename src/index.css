@@ -49,4 +49,32 @@ body {
   text-rendering: optimizeLegibility;
   margin: 0;
   padding: 0;
+  
+}
+
+.line {
+  display: none;
+}
+
+@media screen and (min-width: 1279px) {
+  .line {
+    display: flex;
+    padding: 0;
+    margin: 0 70px;
+    width: auto;
+    height: 0;
+    border: none;
+    border-top: 1px solid #E8E8E8;;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1279px) {
+  .line {
+    display: flex;
+    padding: 0;
+    margin: 0 30px;
+    width: auto;
+    height: 0;
+    border: none;
+    border-top: 1px solid #E8E8E8;;
+  }
 }

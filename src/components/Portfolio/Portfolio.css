@@ -66,7 +66,7 @@
     height: 24px;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 769px) {
     .portfolio {
         display: flex;
         flex-direction: column;
