@@ -16,11 +16,15 @@
     transition: opacity 0.3s ease-in-out;
 }
 
+.sign-submit-btn_disabled {
+    background: rgba(191, 191, 191);
+}
+
 .sign-submit-btn:hover {
     opacity: 0.6;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 767px) {
     .sign-submit-btn {
         padding: 13px 0 15px 0;
         font-size: 14px;

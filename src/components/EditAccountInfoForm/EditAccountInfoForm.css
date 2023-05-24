@@ -33,13 +33,19 @@
     width: 100%;
     cursor: pointer;
     transition: opacity 0.3s ease-in-out;
+    margin-top: 40px;
 }
+
+.edit-form__submit-btn_disabled {
+    background: rgba(191, 191, 191);
+}
+
 
 .edit-form__submit-btn:hover {
     opacity: 0.6;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 767px) {
     .edit-form__form {
         font-size: 24px;
         line-height: 29px;

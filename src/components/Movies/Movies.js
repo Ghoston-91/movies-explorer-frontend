@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import AccountHeader from '../AccountHeader/AccountHeader';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
@@ -9,31 +9,37 @@ import Greetings from '../Greetings/Greetings'
 
 function Movies(props) {
 
-    // тест лоудера
-    const isLoading = false;
-    const isMoreLoading = false;
-    const isEmptyList = false;
-
     return (
-        <div className='movies'>
+        <section className='movies'>
             <AccountHeader routeLinks={props.routeLinks}/>
-            <main>
-                <SearchForm />
-                    {!isLoading ?
-                        <>
-                            {!isEmptyList ?
-                                <>
-                                    <MoviesCardList isProfile={false}/>
-                                    {!isMoreLoading ? 
-                                    <FindMoreBtn isProfile={false}/> 
-                                    : <Preloader />}
-                                </>
-                            : <Greetings text={'По данному запросу фильмы не найдены...'}/>}
-                        </>
-                    : <Preloader />}
+            <main className='movies__main'>
+                <SearchForm 
+                    onSearch={props.onSearch}
+                    searchValue={props.searchValue}
+                    switchValue={props.switchValue} 
+                    isProfile={false}
+                />
+                {!props.isLoading ?
+                    <>
+                        <MoviesCardList 
+                            isProfile={false} 
+                            userCards={props.userCards} 
+                            onSave={props.onSave}
+                            userSavedMovies={props.userSavedMovies}
+                        />
+                        {!props.isMoreLoading ? 
+                            <>
+                                {!props.isMoreMoviesExists ? "" : <FindMoreBtn onMore={props.onMore}/>} 
+                            </>
+                        : <Preloader />
+                        }
+                    </> 
+                : <Preloader />
+                }
+                {!props.isEmptyList ? "" : <Greetings text={'По данному запросу ничего не найдено...'}/>}
             </main>  
             <Footer />
-        </div>
+        </section>
     );
 }
 

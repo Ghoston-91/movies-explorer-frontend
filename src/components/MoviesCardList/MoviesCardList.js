@@ -1,14 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import MoviesCard from '../MoviesCard/MoviesCard'
 
 function MoviesCardList(props) {
 
     return (
-        <ul className='movies-list'>
-            <MoviesCard title={'33 слова о дизайне'} length={'1ч 47м'} img={'https://i.ibb.co/KmHKpZG/pic-COLOR-pic.jpg'} isSaved={true} isProfile={props.isProfile}/>
-            <MoviesCard title={'33 слова о дизайне'} length={'1ч 47м'} img={'https://i.ibb.co/KmHKpZG/pic-COLOR-pic.jpg'} isSaved={true} isProfile={props.isProfile}/>
-            <MoviesCard title={'33 слова о дизайне'} length={'1ч 47м'} img={'https://i.ibb.co/KmHKpZG/pic-COLOR-pic.jpg'} isSaved={true} isProfile={props.isProfile}/>
-        </ul>
+        <>
+            {props.isProfile ?
+                <>
+                    <section className='movies-list'>
+                    {props.userCards?.map((item) => (
+                        <MoviesCard 
+                            key={item._id} 
+                            item={item} 
+                            onSave={props.onSave} 
+                            isProfile={props.isProfile}
+                        />
+                            ))}
+                    </section>
+                </> 
+                :
+                <>
+                    <section className='movies-list'>
+                    {props.userCards?.map((item) => (
+                        <MoviesCard 
+                            key={item.id} 
+                            item={item} 
+                            userSavedMovies={props.userSavedMovies} 
+                            onSave={props.onSave} 
+                            isProfile={props.isProfile}
+                        />
+                        ))}
+                    </section>
+                </>
+            }
+        </>
     );
 }
 

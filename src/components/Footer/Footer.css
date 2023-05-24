@@ -70,16 +70,7 @@
     color: #A0A0A0;
 }
 
-@media screen and (max-width: 320px) {
-
-    .footer__desc {
-        padding: 79px 0 20px 0;
-        font-size: 11px;
-        line-height: 16px;
-    }
-}
-
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 767px) {
     .footer {
         padding: 0 30px;
         margin: 0;
