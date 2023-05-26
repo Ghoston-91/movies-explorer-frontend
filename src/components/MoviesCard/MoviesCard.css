@@ -1,7 +1,6 @@
 .movie-card {
     width: auto;
     margin: 0 0 16px 0;
-    list-style-type: none;
 }
 
 .movie-card__container {
@@ -18,13 +17,17 @@
 
 .movie-card__title {
     padding: 0;
-    margin: 0 0 9px 0;
+    margin: 0 10px 9px 0;
     grid-area: title;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
     color: #000000;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .movie-card__length {
@@ -63,9 +66,10 @@
     width: 100%;
     aspect-ratio: 1.7857;
     object-fit: cover;
+    cursor: pointer;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 767px) {
     .movie-card {
         margin: 0;
     }
@@ -73,7 +77,6 @@
 
 @media screen and (min-width: 1279px) {
     .movie-card__title {
-        margin: 0 0 9px 0;
         font-size: 15px;
         line-height: 18px;
     }

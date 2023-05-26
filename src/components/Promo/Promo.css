@@ -5,8 +5,22 @@
     margin: 14px 14px 0 14px;
     border-radius: 10px;
     min-height: 586px;
-    background: #F5F5F5;
+    background: #F5F5F5; 
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
 	height: 100%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .promo__text {
@@ -16,13 +30,13 @@
     line-height: 37px;
     text-align: center;
     letter-spacing: -0.04em;
-    color: #000000; 
+    color: #252525; 
     padding: 0;
     margin: 220px auto 0 auto;
     max-width: 292px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 767px) {
     .promo {
         min-height: 834px;
         margin: 20px 20px 0 20px;
@@ -37,7 +51,7 @@
     
 }
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1279px) {
     .promo {
         min-height: 493px;
         margin: 20px auto 0 auto;

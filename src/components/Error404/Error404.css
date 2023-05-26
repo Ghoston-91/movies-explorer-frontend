@@ -39,7 +39,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    color: #2BE080;
+    color: #FF6838;
     background-color: transparent;
     border: none;
     transition: 0.3s ease-in-out opacity;
@@ -51,7 +51,7 @@
     opacity: 0.6;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 767px) {
     .errorNotFound__number {
         font-size: 140px;
         line-height: 169px;
